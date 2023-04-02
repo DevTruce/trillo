@@ -1,0 +1,50 @@
+// ########## CONTAINER START ########## //
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--color-grey-light--2);
+  box-shadow: var(--shadow-dark);
+
+  //testing purposes - remove this!
+  min-height: 50rem;
+}
+// ########## CONTAINER END ########## //
+
+// ########## HEADER START ########## //
+.header {
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--color-grey-light--2);
+}
+// ########## HEADER END ########## //
+
+// ########## CONTENT START ########## //
+.content {
+  display: flex;
+}
+// ########## CONTENT END ########## //
+
+// ########## SIDE BAR START ########## //
+.side-bar {
+  background-color: var(--color-grey-dark--1);
+  // grow | shrink | basis
+  flex: 0 0 18%;
+}
+// ########## SIDE BAR END ########## //
+
+// ########## HOTEL VIEW START ########## //
+.hotel-view {
+  background-color: #fff;
+
+  // element should grow as much as it can
+  flex: 1;
+
+  //testing purposes - remove this!
+  background-color: orangered;
+}
+// ########## HOTEL VIEW END ########## //
+
+// ########## FOOTER START ########## //
+.footer {
+}
+// ########## FOOTER END ########## //
