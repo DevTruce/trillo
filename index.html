@@ -14,13 +14,69 @@
     <title>Trillo &mdash; Your all-in-one booking app</title>
   </head>
   <body>
+    <!-- #### PAGE CONTAINER -->
     <div class="container">
-      <header class="header">HEADER PART</header>
+      <!-- #### HEADER -->
+
+      <!-- logo -->
+      <header class="header">
+        <img src="src/imgs/logo.png" alt="" class="logo" />
+
+        <!-- search bar -->
+        <form class="search" action="">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="Search Hotels"
+          />
+          <button class="search__button">
+            <svg class="search__icon">
+              <use xlink:href="src/imgs/sprite.svg#icon-magnifying-glass"></use>
+            </svg>
+          </button>
+        </form>
+
+        <!-- bookmark icon -->
+        <nav class="user-nav">
+          <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+              <use xlink:href="src/imgs/sprite.svg#icon-bookmark"></use>
+            </svg>
+            <span class="user-nav__notification">7</span>
+          </div>
+
+          <!-- chat icon -->
+          <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+              <use xlink:href="src/imgs/sprite.svg#icon-chat"></use>
+            </svg>
+            <span class="user-nav__notification">13</span>
+          </div>
+
+          <!-- user -->
+          <div class="user-nav__user">
+            <img
+              src="src/imgs/main-user.png"
+              alt=""
+              class="user-nav__user-photo"
+            />
+            <span class="user-nav__username">Truce R</span>
+          </div>
+        </nav>
+      </header>
+      <!-- #### HEADER -->
+
+      <!-- #### CONTENT -->
       <div class="content">
         <nav class="side-bar">NAVIGATION</nav>
         <main class="hotel-view">HOTEL VIEW</main>
       </div>
+      <!-- #### CONTENT -->
+
+      <!-- #### FOOTER -->
       <footer class="footer"></footer>
+      <!-- #### FOOTER -->
     </div>
+    <!-- #### PAGE CONTAINER -->
   </body>
 </html>

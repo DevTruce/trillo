@@ -1,4 +1,5 @@
-// ########## CONTAINER START ########## //
+//////////////////////////////////////////////
+// CONTAINER
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -8,31 +9,34 @@
   //testing purposes - remove this!
   min-height: 50rem;
 }
-// ########## CONTAINER END ########## //
 
-// ########## HEADER START ########## //
+//////////////////////////////////////////////
+// HEADER
 .header {
   height: 7rem;
   background-color: #fff;
   border-bottom: var(--color-grey-light--2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-// ########## HEADER END ########## //
 
-// ########## CONTENT START ########## //
+//////////////////////////////////////////////
+// CONTENT
 .content {
   display: flex;
 }
-// ########## CONTENT END ########## //
 
-// ########## SIDE BAR START ########## //
+//////////////////////////////////////////////
+// SIDEBAR
 .side-bar {
   background-color: var(--color-grey-dark--1);
   // grow | shrink | basis
   flex: 0 0 18%;
 }
-// ########## SIDE BAR END ########## //
 
-// ########## HOTEL VIEW START ########## //
+//////////////////////////////////////////////
+// HOTEL VIEW
 .hotel-view {
   background-color: #fff;
 
@@ -42,9 +46,8 @@
   //testing purposes - remove this!
   background-color: orangered;
 }
-// ########## HOTEL VIEW END ########## //
 
-// ########## FOOTER START ########## //
+//////////////////////////////////////////////
+// FOOTER
 .footer {
 }
-// ########## FOOTER END ########## //

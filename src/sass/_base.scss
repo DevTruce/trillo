@@ -1,4 +1,11 @@
-// ########## VARIABLES START ########## //
+//////////////////////////////////////////////
+// DEBUG
+// * {
+//   border: 0.2rem solid red;
+// }
+
+//////////////////////////////////////////////
+// VARIABLES
 :root {
   //colors
   --color-primary: #eb2f64;
@@ -17,9 +24,9 @@
   //box shadows
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 }
-// ########## VARIABLES END ########## //
 
-// ########## GLOBAL RESET START ########## //
+//////////////////////////////////////////////
+// GLOBAL RESET
 * {
   padding: 0;
   margin: 0;
@@ -40,7 +47,7 @@ body {
   min-height: 100vh;
   font-family: "Open Sans";
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.6;
   color: var(--color-grey-dark--2);
   background-image: linear-gradient(
@@ -51,4 +58,29 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-// ########## GLOBAL RESET END ########## //
+
+//////////////////////////////////////////////
+// SCROLL BAR
+
+// size
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+// tracking
+::-webkit-scrollbar-track {
+  box-shadow: var(--shadow-dark);
+  border-radius: 0.5rem;
+}
+
+// handle
+::-webkit-scrollbar-thumb {
+  background: var(--color-grey-dark--1);
+  border-radius: 0.5rem;
+}
+
+// handle on hover
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-grey-dark--3);
+  border-radius: 0.5rem;
+}

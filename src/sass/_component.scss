@@ -1,0 +1,123 @@
+//////////////////////////////////////////////
+// LOGO
+.logo {
+  height: 3.25rem;
+  margin-left: 2rem;
+}
+
+//////////////////////////////////////////////
+// SEARCH
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 40%;
+
+  &__input {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: var(--color-grey-light--2);
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 50rem;
+    width: 90%;
+    margin-right: -3.25rem;
+    transition: all 200ms;
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light--3);
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light--4);
+    }
+  }
+
+  //   when input is focused change background color of button to match
+  &__input:focus + &__button {
+    background-color: var(--color-grey-light--3);
+  }
+
+  &__button {
+    border: none;
+    background-color: var(--color-grey-light--2);
+
+    &:focus {
+      outline: none;
+      transform: translateY(0.2rem);
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark--3);
+  }
+}
+
+//////////////////////////////////////////////
+// USER NAV
+.user-nav {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+
+  // all DIRECT children of the user-nav class
+  & > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  & > *:hover {
+    padding: 0 2rem;
+    cursor: pointer;
+    background-color: var(--color-grey-light--2);
+  }
+
+  &__icon-box {
+    position: relative;
+  }
+
+  &__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: var(--color-grey-dark--2);
+  }
+
+  &__notification {
+    font-size: 0.8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.1rem;
+
+    // center text
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__user {
+  }
+
+  &__user-photo {
+    height: 4rem;
+    width: 4rem;
+    border: 50%;
+    margin-right: 1rem;
+  }
+
+  &__username {
+  }
+}
