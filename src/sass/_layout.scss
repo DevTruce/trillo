@@ -54,24 +54,26 @@
   padding: 4.5rem;
   background-color: var(--color-grey-light--2);
   border-bottom: var(--border-1);
+  font-size: 1.4rem;
 }
 
 .description {
   // 0 grow | 0 shrink | 60% basis (width)
-  flex: 0 0 60%;
+  flex: 0 0 55%;
   margin-right: 4.5rem;
   background-color: white;
   box-sizing: var(--shadow-light);
   padding: 3rem;
-  font-size: 1.4rem;
 }
 
 .user-reviews {
   // fill leftover space
   flex: 1;
 
-  // testing remove this
-  background-color: yellowgreen;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 //////////////////////////////////////////////
