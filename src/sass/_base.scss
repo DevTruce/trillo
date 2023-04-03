@@ -25,6 +25,10 @@
 
   //box shadows
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.6);
+
+  // borders
+  --border-1: 0.1rem solid var(--color-grey-light--2);
 }
 
 //////////////////////////////////////////////
