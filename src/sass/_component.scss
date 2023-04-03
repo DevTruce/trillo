@@ -1,3 +1,5 @@
+// Developer: Truce R
+
 //////////////////////////////////////////////
 // LOGO
 .logo {
@@ -120,4 +122,86 @@
 
   &__username {
   }
+}
+
+//////////////////////////////////////////////
+// SIDE NAVIGATION
+
+.side-nav {
+  font-size: 1.4rem;
+  margin-top: 3.5rem;
+  list-style: none;
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  // hover effect element
+  &__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0.3rem;
+    background-color: var(--color-primary);
+    transform-origin: bottom;
+    transform: scaleY(0);
+    // animate transform, delay width animation for duration of transform then animate width
+    transition: transform 200ms, width 400ms cubic-bezier(1, 0, 0, 1) 200ms,
+      background-color 100ms;
+  }
+
+  // hover effect element (preset active state)
+  &__item:hover::before,
+  &__item--active::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  // active state
+  &__item:active::before {
+    background-color: var(--color-primary--light);
+  }
+
+  // link styles
+  &__link {
+    &:link,
+    &:visited {
+      color: var(--color-grey-light--1);
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      padding: 1.5rem 3rem;
+
+      // allow for link to display over hover effect
+      z-index: 10;
+      position: relative;
+
+      // center icon and text
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    fill: currentColor;
+    margin-right: 2rem;
+  }
+}
+
+//////////////////////////////////////////////
+// LEGAL TEXT
+
+.legal {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2.5rem;
+  color: var(--color-grey-light--3);
 }
