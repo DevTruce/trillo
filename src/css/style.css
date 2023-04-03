@@ -60,7 +60,7 @@ body {
 .header {
   height: 7rem;
   background-color: #fff;
-  border-bottom: var(--color-grey-light--2);
+  border-bottom: 0.1rem solid var(--color-grey-light--2);
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -78,7 +78,6 @@ body {
 .hotel-view {
   background-color: #fff;
   flex: 1;
-  background-color: var(--color-primary);
   height: 80rem; }
 
 .logo {
@@ -205,3 +204,77 @@ body {
   text-align: center;
   padding: 2.5rem;
   color: var(--color-grey-light--3); }
+
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    display: block;
+    width: 100%; }
+
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: 0.1rem solid var(--color-grey-light--2); }
+  .overview__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 1.5rem 3rem; }
+  .overview__stars {
+    margin-right: auto;
+    display: flex; }
+  .overview__icon--star, .overview__location--icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary); }
+  .overview__location {
+    display: flex;
+    vertical-align: center;
+    font-size: 1.2rem; }
+    .overview__location--icon {
+      margin-right: 0.5rem; }
+  .overview__rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--color-primary);
+    margin-left: 3rem;
+    color: #fff;
+    align-self: stretch;
+    padding: 0 2.25rem; }
+  .overview__rating--average {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: -0.3rem; }
+  .overview__rating--count {
+    font-size: 0.8rem;
+    text-transform: uppercase; }
+
+.btn-inline {
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit;
+  border-bottom: 0.1rem solid currentColor;
+  padding-bottom: 0.2rem;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 200ms; }
+  .btn-inline:hover {
+    color: var(--color-grey-dark--1); }
+  .btn-inline:focus {
+    outline: none;
+    animation: pulse 1s infinite; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: none; }
+  70% {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-dark); }
+  100% {
+    transform: scale(1);
+    box-shadow: none; } }

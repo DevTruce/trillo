@@ -205,3 +205,122 @@
   padding: 2.5rem;
   color: var(--color-grey-light--3);
 }
+
+//////////////////////////////////////////////
+// GALLERY
+.gallery {
+  display: flex;
+
+  &__item {
+  }
+
+  &__photo {
+    display: block;
+    width: 100%;
+  }
+}
+
+//////////////////////////////////////////////
+// OVERVIEW
+
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: 0.1rem solid var(--color-grey-light--2);
+
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 1.5rem 3rem;
+  }
+
+  &__stars {
+    // create space between stars and location
+    margin-right: auto;
+
+    // fix starts not being correctly centered
+    display: flex;
+  }
+
+  &__icon--star,
+  &__location--icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary);
+  }
+
+  &__location {
+    display: flex;
+    vertical-align: center;
+    font-size: 1.2rem;
+
+    &--icon {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--color-primary);
+    margin-left: 3rem;
+    color: #fff;
+    align-self: stretch;
+    padding: 0 2.25rem;
+  }
+
+  &__rating--average {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: -0.3rem;
+  }
+
+  &__rating--count {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+}
+
+//////////////////////////////////////////////
+// BUTTON INLINE
+.btn-inline {
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit;
+  border-bottom: 0.1rem solid currentColor;
+  padding-bottom: 0.2rem;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 200ms;
+
+  &:hover {
+    color: var(--color-grey-dark--1);
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulse 1s infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  70% {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-dark);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
