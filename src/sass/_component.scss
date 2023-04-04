@@ -73,6 +73,7 @@
   align-self: stretch;
   display: flex;
   align-items: center;
+  position: relative;
 
   // all DIRECT children of the user-nav class
   & > * {
@@ -117,6 +118,11 @@
   }
 
   &__user {
+    // display user panel on user icon hover
+    &:hover .user-block {
+      height: 17rem;
+      transition: all 300ms;
+    }
   }
 
   &__user-photo {
@@ -127,6 +133,84 @@
   }
 
   &__username {
+  }
+}
+
+//////////////////////////////////////////////
+// USER PANEL
+.user-panel {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      width: 0;
+      height: 100%;
+      background-color: var(--color-primary);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 200ms, width 400ms cubic-bezier(1, 0, 0, 1) 200ms,
+        background-color 100ms;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      width: 100%;
+    }
+
+    &:active::before {
+      background-color: var(--color-primary--light);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0.3rem;
+    }
+
+    &--active {
+      background-color: var(--color-primary);
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: var(--color-grey-light--1);
+      font-size: 1.4rem;
+      font-weight: 300;
+      z-index: 5;
+      cursor: pointer;
+    }
+
+    &:hover,
+    &:focus {
+    }
+
+    &:active {
+    }
+  }
+
+  &__icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    margin-right: 2rem;
+    fill: currentColor;
   }
 }
 

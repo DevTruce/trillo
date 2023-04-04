@@ -32,6 +32,22 @@
 }
 
 //////////////////////////////////////////////
+// USER PANEL
+
+.user-block {
+  color: var(--color-primary);
+  background-color: var(--color-grey-dark--1);
+  width: 75%;
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  height: 0;
+  overflow: hidden;
+  transition: all 300ms;
+}
+
+//////////////////////////////////////////////
 // CONTENT
 .content {
   display: flex;
