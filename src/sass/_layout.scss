@@ -8,8 +8,10 @@
   background-color: var(--color-grey-light--2);
   box-shadow: var(--shadow-dark);
 
-  //testing purposes - remove this!
-  min-height: 50rem;
+  @include respond(breakPoint-largest) {
+    margin: 0;
+    max-width: 100%;
+  }
 }
 
 //////////////////////////////////////////////
@@ -21,12 +23,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include respond(breakPoint-smallest) {
+    flex-wrap: wrap;
+    height: 11rem;
+    align-content: space-around;
+  }
 }
 
 //////////////////////////////////////////////
 // CONTENT
 .content {
   display: flex;
+
+  @include respond(breakPoint-medium) {
+    flex-direction: column;
+  }
 }
 
 //////////////////////////////////////////////
@@ -55,6 +67,14 @@
   background-color: var(--color-grey-light--2);
   border-bottom: var(--border-1);
   font-size: 1.4rem;
+
+  @include respond(breakPoint-medium) {
+    padding: 3rem;
+  }
+
+  @include respond(breakPoint-small) {
+    flex-direction: column;
+  }
 }
 
 .description {
@@ -64,6 +84,16 @@
   background-color: white;
   box-sizing: var(--shadow-light);
   padding: 3rem;
+
+  @include respond(breakPoint-medium) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+
+  @include respond(breakPoint-small) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
 }
 
 .user-reviews {

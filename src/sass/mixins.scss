@@ -1,0 +1,39 @@
+//////////////////////////////////////////////
+// MEDIA QUERIES
+// 1 rem = 16px (this cannot be changed)
+@mixin respond($breakpoint) {
+  @if $breakpoint == breakPoint-largest {
+    @media only screen and (max-width: 75em) {
+      // 1200px
+      @content;
+    }
+  }
+
+  @if $breakpoint == breakPoint-large {
+    @media only screen and (max-width: 68.75em) {
+      // 1100px
+      @content;
+    }
+  }
+
+  @if $breakpoint == breakPoint-medium {
+    @media only screen and (max-width: 68.75em) {
+      // 900px
+      @content;
+    }
+  }
+
+  @if $breakpoint == breakPoint-small {
+    @media only screen and (max-width: 37.5em) {
+      // 600px
+      @content;
+    }
+  }
+
+  @if $breakpoint == breakPoint-smallest {
+    @media only screen and (max-width: 31.25em) {
+      // 500px
+      @content;
+    }
+  }
+}

@@ -15,6 +15,12 @@
   justify-content: center;
   flex: 0 0 40%;
 
+  @include respond(breakPoint-smallest) {
+    order: 1;
+    flex-basis: 100%;
+    background-color: var(--color-grey-light--2);
+  }
+
   &__input {
     color: inherit;
     font-family: inherit;
@@ -132,11 +138,24 @@
   margin-top: 3.5rem;
   list-style: none;
 
+  @include respond(breakPoint-medium) {
+    display: flex;
+    margin: 0;
+  }
+
   &__item {
     position: relative;
 
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+
+      @include respond(breakPoint-medium) {
+        margin: 0;
+      }
+    }
+
+    @include respond(breakPoint-medium) {
+      flex: 1;
     }
   }
 
@@ -185,6 +204,18 @@
       // center icon and text
       display: flex;
       align-items: center;
+
+      @include respond(breakPoint-medium) {
+        display: flex;
+        margin: 0;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      @include respond(breakPoint-small) {
+        flex-direction: column;
+        padding: 1.5rem 0.5rem;
+      }
     }
   }
 
@@ -193,6 +224,13 @@
     width: 1.75rem;
     fill: currentColor;
     margin-right: 2rem;
+
+    @include respond(breakPoint-small) {
+      margin-right: 0;
+      margin-bottom: 0.7rem;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
   }
 }
 
@@ -204,6 +242,10 @@
   text-align: center;
   padding: 2.5rem;
   color: var(--color-grey-light--3);
+
+  @include respond(breakPoint-medium) {
+    display: none;
+  }
 }
 
 //////////////////////////////////////////////
@@ -234,6 +276,11 @@
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     padding: 1.5rem 3rem;
+
+    @include respond(breakPoint-small) {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
   }
 
   &__stars {
@@ -271,17 +318,29 @@
     color: #fff;
     align-self: stretch;
     padding: 0 2.25rem;
+
+    @include respond(breakPoint-small) {
+      padding: 0 1.5rem;
+    }
   }
 
   &__rating--average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -0.3rem;
+
+    @include respond(breakPoint-small) {
+      font-size: 1.8rem;
+    }
   }
 
   &__rating--count {
     font-size: 0.8rem;
     text-transform: uppercase;
+
+    @include respond(breakPoint-small) {
+      font-size: 0.5rem;
+    }
   }
 }
 
@@ -368,16 +427,21 @@
     margin-right: 0.7rem;
 
     // approach for older browsers
-    // background-image: url(../imgs/chevron-thin-right.svg);
-    // background-repeat: no-repeat;
-    // background-size: cover;
+    // if the browser does not support mask image it will use this code
+    background-image: url(../imgs/chevron-thin-right.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
     // approach for modern browsers
-    background-color: var(--color-primary);
-    -webkit-mask-image: url(../imgs/chevron-thin-right.svg);
-    -webkit-mask-size: cover;
-    mask-image: url(../imgs/chevron-thin-right.svg);
-    mask-size: cover;
+    // if the browsers supports mask image then use this code
+    @supports (-webkit-mask-image: url()) or (-webkit-mask-image: url()) {
+      background-color: var(--color-primary);
+      -webkit-mask-image: url(../imgs/chevron-thin-right.svg);
+      -webkit-mask-size: cover;
+      mask-image: url(../imgs/chevron-thin-right.svg);
+      mask-size: cover;
+      background-image: none;
+    }
   }
 }
 
@@ -395,6 +459,7 @@
   }
 
   &__friends {
+    display: flex;
   }
 
   &__photo {
@@ -421,6 +486,11 @@
   position: relative;
   overflow: hidden;
 
+  @include respond(breakPoint-medium) {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
   &__text {
     margin-bottom: 2rem;
     z-index: 2;
@@ -437,6 +507,10 @@
     width: 4.5rem;
     border-radius: 50%;
     margin-right: 1.5rem;
+
+    @include respond(breakPoint-largest) {
+      margin-right: 2rem;
+    }
   }
 
   &__user-box {
@@ -480,6 +554,10 @@
 .cta {
   padding: 3.5rem 0;
   text-align: center;
+
+  @include respond(breakPoint-medium) {
+    padding: 2rem 0;
+  }
 
   &__book-now {
     text-transform: uppercase;

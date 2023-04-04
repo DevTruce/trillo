@@ -47,6 +47,10 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px - 10px/16px = 0.625 (62.5%)
+
+  @include respond(breakPoint-large) {
+    font-size: 50%; // 1rem = 8px - 8px/16px = 0.625 (50%)
+  }
 }
 
 body {
