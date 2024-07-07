@@ -36,6 +36,68 @@
               <use xlink:href="src/imgs/sprite.svg#icon-magnifying-glass"></use>
             </svg>
           </button>
+
+          <div class="search-panel">
+            <!-- search 1 -->
+            <div class="search-panel__search">
+              <img
+                src="src/imgs/user-1.jpg"
+                alt=""
+                class="search-panel__icon"
+              />
+              <div class="search-panel__name">Holiday Inn</div>
+            </div>
+
+            <!-- search 2 -->
+            <div class="search-panel__search">
+              <img
+                src="src/imgs/user-1.jpg"
+                alt=""
+                class="search-panel__icon"
+              />
+              <div class="search-panel__name">Holiday Inn</div>
+            </div>
+
+            <!-- search 3 -->
+            <div class="search-panel__search">
+              <img
+                src="src/imgs/user-1.jpg"
+                alt=""
+                class="search-panel__icon"
+              />
+              <div class="search-panel__name">Holiday Inn</div>
+            </div>
+
+            <!-- search 4 -->
+            <div class="search-panel__search">
+              <img
+                src="src/imgs/user-1.jpg"
+                alt=""
+                class="search-panel__icon"
+              />
+              <div class="search-panel__name">Holiday Inn</div>
+            </div>
+
+            <!-- search 5 -->
+            <div class="search-panel__search">
+              <img
+                src="src/imgs/user-1.jpg"
+                alt=""
+                class="search-panel__icon"
+              />
+              <div class="search-panel__name">Holiday Inn</div>
+            </div>
+
+            <!-- search 6 -->
+            <div class="search-panel__search">
+              <img
+                src="src/imgs/user-1.jpg"
+                alt=""
+                class="search-panel__icon"
+              />
+              <div class="search-panel__name">Holiday Inn</div>
+            </div>
+          </div>
         </form>
 
         <!-- bookmark icon -->
@@ -45,6 +107,24 @@
               <use xlink:href="src/imgs/sprite.svg#icon-bookmark"></use>
             </svg>
             <span class="user-nav__notification">7</span>
+
+            <div class="bookmark-panel">
+              <div class="bookmark-user">
+                <p class="bookmark-name">Holiday Inn</p>
+              </div>
+              <div class="bookmark-user">
+                <p class="bookmark-name">Marriott</p>
+              </div>
+              <div class="bookmark-user">
+                <p class="bookmark-name">Hyatt</p>
+              </div>
+              <div class="bookmark-user">
+                <p class="bookmark-name">Four Seasons</p>
+              </div>
+              <div class="bookmark-user">
+                <p class="bookmark-name">Aman Resorts</p>
+              </div>
+            </div>
           </div>
 
           <!-- chat icon -->
@@ -53,6 +133,22 @@
               <use xlink:href="src/imgs/sprite.svg#icon-chat"></use>
             </svg>
             <span class="user-nav__notification">13</span>
+
+            <!-- chat icon panel -->
+            <div class="message-panel">
+              <div class="message-panel__tag">
+                <p class="message-panel__notification">&nbsp;</p>
+                <p class="message-panel__message">You have 13 new messages!</p>
+              </div>
+              <div class="message-panel__tag--2">
+                <img
+                  src="src/imgs/user-6.jpg"
+                  alt=""
+                  class="message-panel__icon"
+                />
+                <p class="message-panel__alert">Lucy and 12 others</p>
+              </div>
+            </div>
           </div>
 
           <!-- user -->
@@ -63,6 +159,51 @@
               class="user-nav__user-photo"
             />
             <span class="user-nav__username">Truce</span>
+
+            <!-- user panel -->
+            <div class="user-block">
+              <ul class="user-panel">
+                <!-- account settings -->
+                <li class="user-panel__item user-panel__item--active">
+                  <a class="user-panel__link" href="#"
+                    ><svg class="user-panel__icon">
+                      <use xlink:href="src/imgs/sprite.svg#icon-cog"></use></svg
+                    ><span>Account Settings</span></a
+                  >
+                </li>
+
+                <!-- my history -->
+                <li class="user-panel__item">
+                  <a class="user-panel__link" href="#"
+                    ><svg class="user-panel__icon">
+                      <use
+                        xlink:href="src/imgs/sprite.svg#icon-book"
+                      ></use></svg
+                    ><span>My History</span></a
+                  >
+                </li>
+
+                <!-- report a bug -->
+                <li class="user-panel__item">
+                  <a class="user-panel__link" href="#"
+                    ><svg class="user-panel__icon">
+                      <use xlink:href="src/imgs/sprite.svg#icon-bug"></use></svg
+                    ><span>Report a Bug</span></a
+                  >
+                </li>
+
+                <!-- log out -->
+                <li class="user-panel__item">
+                  <a class="user-panel__link" href="#"
+                    ><svg class="user-panel__icon">
+                      <use
+                        xlink:href="src/imgs/sprite.svg#icon-switch"
+                      ></use></svg
+                    ><span>Log Out</span></a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </header>
@@ -121,15 +262,36 @@
           <!-- gallery view -->
           <div class="gallery">
             <figure class="gallery__item">
-              <img class="gallery__photo" src="src/imgs/hotel-1.jpg" alt="" />
+              <img
+                class="gallery__photo gallery__photo--1"
+                src="src/imgs/hotel-1.jpg"
+                alt=""
+              />
+              <figcaption class="gallery__photo-caption">
+                Luxurious Ambient Nights
+              </figcaption>
             </figure>
 
             <figure class="gallery__item">
-              <img class="gallery__photo" src="src/imgs/hotel-2.jpg" alt="" />
+              <img
+                class="gallery__photo gallery__photo--2"
+                src="src/imgs/hotel-2.jpg"
+                alt=""
+              />
+              <figcaption class="gallery__photo-caption">
+                Relaxed Atmosphere
+              </figcaption>
             </figure>
 
             <figure class="gallery__item">
-              <img class="gallery__photo" src="src/imgs/hotel-3.jpg" alt="" />
+              <img
+                class="gallery__photo gallery__photo--3"
+                src="src/imgs/hotel-3.jpg"
+                alt=""
+              />
+              <figcaption class="gallery__photo-caption">
+                Lovely Sights
+              </figcaption>
             </figure>
           </div>
 
